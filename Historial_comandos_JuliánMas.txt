@@ -1,0 +1,58 @@
+ssh-keygen -t ed25519
+cat $HOME/.ssh/*.pub
+cd
+mkdir repogit
+cd repogit
+git clone git@github.com:JulianMass/TP1_AySO_2025.git
+cd TP1_AySO_2025/
+pwd
+ls -l
+cat /etc/os-release
+grep -i home_url /etc/os-release
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+git status
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git config --global user.email "julianmas97@gmail.com" ; git config --global user.name "Julian_Mas"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git add .
+git status
+git add .
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+git config --global user.email "julianmas97@gmail.com" ; git config --global user.name "Julian_Mas"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+grep "model name" /proc/cpuinfo | head n-1
+grep "model name" /proc/cpuinfo | head -n1
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt 
+git add datos_usuario.txt 
+git commit -m "feat: Añadiendo informacion de la CPU" 
+man grep
+grep -v "nologin" /etc/passwd | head -n10 | sort -t: -k7 > lista_ordenada
+git add lista_ordenada 
+cd
+cd repogit
+cd TP1_AySO_2025/
+git add lista_ordenada 
+grep -v "nologin" /etc/passwd | head -n10 | sort -t: -k7 > lista_ordenada
+git add lista_ordenada 
+git commit -m "ADD: Listado de usuarios ordenada"
+man -k traffic
+man -k
+man -k dump
+man tcpdump
+echo "tcpdump" > comando_dump_net
+git add comando_dump_net 
+git commit -m "ADD: Comando para capturar y analizar el trafico de la red"
+git status
+cat << EOF >> README.md 
+Alumno : Julián Mas
+División: 314
+Turno: Noche
+EOF
+
+git add README.md 
+git commit -m "docs: Añadiendo datos personales al README"
+git status
+history -a
